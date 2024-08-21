@@ -100,7 +100,7 @@
 					"description": "%githubPullRequests.pullRequestDescription.description%"
 				},
 				"githubPullRequests.defaultCreateOption": {
-					"type":"string",
+					"type": "string",
 					"enum": [
 						"lastUsed",
 						"create",
@@ -441,7 +441,11 @@
 				},
 				"githubPullRequests.createDefaultBaseBranch": {
 					"type": "string",
-					"enum": ["repositoryDefault", "createdFromBranch", "auto"],
+					"enum": [
+						"repositoryDefault",
+						"createdFromBranch",
+						"auto"
+					],
 					"markdownEnumDescriptions": [
 						"%githubPullRequests.createDefaultBaseBranch.repositoryDefault%",
 						"%githubPullRequests.createDefaultBaseBranch.createdFromBranch%",
@@ -593,7 +597,9 @@
 						{
 							"label": "%githubIssues.queries.default.myIssues%",
 							"query": "is:open assignee:${user} repo:${owner}/${repository}",
-							"groupBy": ["milestone"]
+							"groupBy": [
+								"milestone"
+							]
 						},
 						{
 							"label": "%githubIssues.queries.default.createdIssues%",
@@ -2185,7 +2191,7 @@
 					"command": "pr.openPullRequestOnGitHub",
 					"group": "inline@3",
 					"when": "view == prStatus:github && viewItem =~ /description/ && github:activePRCount >= 2"
-      			},
+				},
 				{
 					"command": "pr.exit",
 					"when": "view == pr:github && viewItem =~ /pullrequest(:local)?:active|description:active/",
